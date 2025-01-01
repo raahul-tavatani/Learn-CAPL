@@ -1,7 +1,5 @@
 # Learn-CAPL
 
-# Learn-CAPL
-
 - Communication Access Programming Language(CAPL) is a proframming language used in CANoe software.
 - CAPL allows users to write scripts to simulate the behaviour of ECUs, networks nodes in a virtual environment.
 - With CAPL users can create custom test scenarios, perform diagnostics, generate and analyze messages, and create interactive simulations. 
