@@ -372,7 +372,7 @@ variables{
     int vehiclespeed;
 }
 
-//Can message
+// Can message
 on message ICM_Info{
     switch(this.CruiseSwitchrequest){
         case 0x1:
