@@ -55,7 +55,8 @@ if(myInt == 42){
 }   else {
     write("Sorry, myInt is not 42");
 }
-
+```
+```
 message 0x123 MyMsg;        // or a DB message
 MyMsg.MySignal = 42;        // set signals/bytes
 output(MyMsg);              // put it on the bus
