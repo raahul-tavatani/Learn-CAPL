@@ -55,6 +55,11 @@ if(myInt == 42){
 }   else {
     write("Sorry, myInt is not 42");
 }
+
+message 0x123 MyMsg;        // or a DB message
+MyMsg.MySignal = 42;        // set signals/bytes
+output(MyMsg);              // put it on the bus
+
 ```
 1. Events: In CAPL, you can define functions that are triggered by specific events, such as when the simulation starts or stops, or when a message is received on the bus. 
 ```
@@ -63,7 +68,7 @@ on message 0x123 {
 }
 ```
 ### CAPL program organization 
-- Overaal, the organization of a CAPL program follows a similar structure to other programming languages, with header files, global variables, functions and event handlers. Understanding this basic structure can help you create well organized and effective CAPL scripts. 
+- Overall, the organization of a CAPL program follows a similar structure to other programming languages, with header files, global variables, functions and event handlers. Understanding this basic structure can help you create well organized and effective CAPL scripts. 
   
 1. Header Files: At the top of your CAPL script, you may include header files that define macros, data types, and functions that you want to use in your script. 
 ```
