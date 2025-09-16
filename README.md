@@ -56,6 +56,7 @@ if(myInt == 42){
     write("Sorry, myInt is not 42");
 }
 ```
+To put an exisiting message which is on DB on bus 
 ```
 message MyMsg;              // Comes from your DBC; its ID is defined there
 MyMsg.MySignal = 42;        // Set a signal value inside the payload
