@@ -113,7 +113,7 @@ on timer 100 {
 ```
 4. Main funtions: Finally, you may define a main functions that is called when the simulation starts. This function typically includes initialization code and starts any necessary timers or 
 event handlers. 
-```
+
 ```
 void main() {
     write("Starting simulation...");
