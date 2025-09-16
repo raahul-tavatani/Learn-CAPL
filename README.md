@@ -57,11 +57,21 @@ if(myInt == 42){
 }
 ```
 ```
-message 0x123 MyMsg;        // or a DB message
-MyMsg.MySignal = 42;        // set signals/bytes
-output(MyMsg);              // put it on the bus
+message MyMsg;              // Comes from your DBC; its ID is defined there
+MyMsg.MySignal = 42;        // Set a signal value inside the payload
+output(MyMsg);              // Send the frame with its DB-defined ID
 
 ```
+To create a new message which is not in DB and put it on the bus
+```
+message 0x123 myRaw;        // Standard 11-bit CAN ID = 0x123
+myRaw.dlc = 2;
+myRaw.byte(0) = 42;         // payload[0] = 42 (== 0x2A)
+myRaw.byte(1) = 0xFF;       // payload[1] = 255 You can write in any format (Hex or binary), CAPL can understand them
+output(myRaw);
+```
+
+
 1. Events: In CAPL, you can define functions that are triggered by specific events, such as when the simulation starts or stops, or when a message is received on the bus. 
 ```
 on message 0x123 {
@@ -87,7 +97,7 @@ message myMessage; // Declare a global message variable
 void sendMyMessage() {
     myMessage.id =0x123;
     myMessage.dlc=8;
-    output(myMessage);
+    output(myMessage); //Writes on the bus
 }
 ```
 1. Event Procedures: You can define event handler functions that will be called when specific events occur in the CANoe simulation environment.
