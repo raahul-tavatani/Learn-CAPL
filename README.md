@@ -75,6 +75,7 @@ on message 0x123 {
 ```
 #include "CAN.h" //Include the CAN header file
 #include "MyLyb.h" //Include a custom library header file
+#include "customer_edits.cin"
 ```
 1. Global Variable Declarations: You can declare global variables that will be accessible throughout your CAPL script. 
 ```
